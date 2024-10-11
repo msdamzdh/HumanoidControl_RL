@@ -1,5 +1,11 @@
 # Humanoid Control with Reinforcement Learning
 
+
+
+https://github.com/user-attachments/assets/a937b0d3-f176-4bd9-af57-63ef6b8df4c5
+
+
+
 This project implements and compares two different neural network architectures for controlling a humanoid robot in a simulated environment using the REINFORCE algorithm. The two models compared are:
 1. A standard Multi-Layer Perceptron (MLP)
 2. A Kolmogorov-Arnold Neural Network (KAN)
@@ -51,16 +57,16 @@ Key differences from MLP:
 | Model | Maximum Reward | Minimum Reward | Training Time | Episodes |
 |-------|----------------|----------------|---------------|----------|
 | KAN   | 324           | 62             | 10m35s        | 1000     |
-| MLP   | 494           | 67             | 1m49s         | 1000     |
+| MLP   | 544           | 64             | 1m49s         | 1000     |
 
 ###  Reward variation history
 | Model | KAN | MLP  |
 |-------| ----| -----|
-| Reward variation history | ![KAN](https://github.com/user-attachments/assets/68733c7c-5d71-4d0e-9df7-df557a95c2db)|![MLP](https://github.com/user-attachments/assets/17c6bff8-b26c-4655-8882-c97b7cfe17c1)|
+| Reward variation history | ![KAN](https://github.com/user-attachments/assets/68733c7c-5d71-4d0e-9df7-df557a95c2db)|![MLP](https://github.com/user-attachments/assets/e672ec65-d292-4767-8200-a44cf85feffb)|
 
 ### Analysis
-1. **Performance**: The MLP model achieved a higher maximum reward (494 vs 324). This suggests that for this particular task, the additional complexity of KAN didn't translate to better performance.
-2. **Stability**: Both models had similar minimum rewards (67 vs 62), indicating comparable baseline stability.
+1. **Performance**: The MLP model achieved a higher maximum reward (544 vs 324). This suggests that for this particular task, the additional complexity of KAN didn't translate to better performance.
+2. **Stability**: Both models had similar minimum rewards (64 vs 62), indicating comparable baseline stability.
 3. **Computational Efficiency**: The MLP model trained significantly faster (1m49s vs 10m35s). This aligns with expectations, as KAN layers are more complex and computationally intensive.
 4. **Theoretical vs Practical**: Despite KAN's theoretical advantages in function approximation, the simpler MLP architecture performed better in this specific task. This highlights the importance of empirical testing alongside theoretical considerations.
 
@@ -83,7 +89,7 @@ Key features:
 ### Training Loop
 The training process for both models:
 1. Runs for 1000 episodes
-2. Records videos every 20-50 episodes
+2. Records videos every 20 episodes
 3. Prints progress every 50 episodes
 4. Collects total rewards and action counts per episode
 
