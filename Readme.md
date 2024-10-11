@@ -53,6 +53,11 @@ Key differences from MLP:
 | KAN   | 324           | 62             | 10m35s        | 1000     |
 | MLP   | 494           | 67             | 1m49s         | 1000     |
 
+###  Reward variation history
+| Model | KAN | MLP  |
+|-------| ----| -----|
+| Reward variation history | ![KAN](https://github.com/user-attachments/assets/68733c7c-5d71-4d0e-9df7-df557a95c2db)|![MLP](https://github.com/user-attachments/assets/17c6bff8-b26c-4655-8882-c97b7cfe17c1)|
+
 ### Analysis
 1. **Performance**: The MLP model achieved a higher maximum reward (494 vs 324). This suggests that for this particular task, the additional complexity of KAN didn't translate to better performance.
 2. **Stability**: Both models had similar minimum rewards (67 vs 62), indicating comparable baseline stability.
